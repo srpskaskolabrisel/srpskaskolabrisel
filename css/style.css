@@ -230,6 +230,12 @@ button {
 .logo{
     width: 20%;
     float: left;
+    display: inline-flex;
+    white-space: nowrap;
+}
+.logo img {
+    max-width: 100%;
+    height: auto;
 }
 .navbar-light .navbar-nav .nav-link {
     color: #040000;
@@ -451,7 +457,7 @@ button {
 .image_2 {
     float: left;
     width: 100%;
-    background-image: url(../images/img-2.png);
+    background-image: url(../images/ivo_andric.png);
     height: 420px;
     background-size: cover;
     background-repeat: no-repeat;
