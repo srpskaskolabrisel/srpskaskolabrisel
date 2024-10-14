@@ -462,6 +462,14 @@ button {
     background-size: cover;
     background-repeat: no-repeat;
 }
+.image_3 {
+    float: left;
+    width: 100%;
+    background-image: url(../images/uciteljica.webp);
+    height: 420px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .classes_text{
     width: 100%;
     float: left;
@@ -581,7 +589,7 @@ button {
 .heading_text{
     width: 100%;
     float: left;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     color: #131313;
 }
@@ -595,7 +603,7 @@ button {
 .heading_text_1{
     width: 100%;
     float: left;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     color: #131313;
     text-align: right;
@@ -843,4 +851,9 @@ textarea#comment::placeholder {
 .carusel_img{
     max-height: 500px;
     width: auto;
+}
+@media screen and (max-width:786px) {
+    .news_img {
+        display: none;
+    }
 }
