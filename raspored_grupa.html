@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+  <!-- basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- mobile metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <!-- site metas -->
+  <title>Распоред ученика по групама</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <!-- style css -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- Responsive-->
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- fevicon -->
+  <link rel="icon" href="images/logo.webp" type="image/png" />
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+  <!-- Tweaks for older IEs-->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  <!-- owl stylesheets -->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+    media="screen">
+  <style>
+    .schedule_table_wrap {
+      margin-top: 30px;
+      clear: both;
+      overflow-x: auto;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(16, 76, 172, 0.12);
+    }
+
+    .schedule_table {
+      width: 100%;
+      min-width: 760px;
+      margin: 0;
+      color: #4c4c4e;
+      background: #ffffff;
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+
+    .schedule_table th,
+    .schedule_table td {
+      padding: 14px 16px;
+      border-right: 1px solid #dce5f2;
+      border-bottom: 1px solid #dce5f2;
+      vertical-align: middle;
+    }
+
+    .schedule_table th {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.35;
+      text-align: center;
+      background: #104cac;
+    }
+
+    .schedule_table td {
+      font-size: 15px;
+      background: #ffffff;
+    }
+
+    .schedule_table tbody tr:nth-child(even) td {
+      background: #f7faff;
+    }
+
+    .schedule_table tbody tr:hover td {
+      background: #eef4fc;
+    }
+
+    .schedule_table th:first-child,
+    .schedule_table td:first-child {
+      border-left: 1px solid #dce5f2;
+    }
+
+    .schedule_table thead th:first-child {
+      border-top-left-radius: 8px;
+    }
+
+    .schedule_table thead th:last-child {
+      border-top-right-radius: 8px;
+    }
+
+    .schedule_table tbody tr:last-child td:first-child {
+      border-bottom-left-radius: 8px;
+    }
+
+    .schedule_table tbody tr:last-child td:last-child {
+      border-bottom-right-radius: 8px;
+    }
+
+    @media only screen and (max-width: 599px) {
+      .schedule_table_wrap {
+        margin-right: -15px;
+        margin-left: -15px;
+        border-radius: 0;
+      }
+
+      .schedule_table th,
+      .schedule_table td {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header section start -->
+  <div class="header_section">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="logo"><a href="index.html"><img src="images/logo.webp"><img style="max-height: 100px; width: auto;"
+            src="images/logo_extra.png"></a></div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">ПОЧЕТНА</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="o_skoli.html">О ШКОЛИ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="o_ivi.html">О ИВИ АНДРИЋУ</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="novosti_i_desavanja.html">НОВОСТИ И ДЕШАВАЊА</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="knjige_i_zadaci.html">КЊИГЕ И ЗАДАЦИ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kontakt.html">КОНТАКТ</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- header section end -->
+  <!-- shortcode section start -->
+  <div class="shortcode_section layout_padding">
+    <div class="container">
+      <h1 class="ballet_text">Распоред ученика по групама</h1>
+      <div class="schedule_table_wrap">
+        <table class="schedule_table">
+          <thead>
+            <tr>
+              <th scope="col">1. група<br>8:45–11:15</th>
+              <th scope="col">2. група<br>11:30–14:00</th>
+              <th scope="col">3. група<br>14:15–16:45</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Нола Степановић</td><td>Адам Глишић</td><td>Виктор Радовановић</td></tr>
+            <tr><td>Нина Миладиновић</td><td>Сара Глишић</td><td>Арсеније Радовановић</td></tr>
+            <tr><td>Андреј Миладиновић</td><td>Тара Булатовић</td><td>Викторија Сана Станојевић</td></tr>
+            <tr><td>Нина Исаковић Шуни</td><td>Виктор Стојановић</td><td>Маргерита Патрногић</td></tr>
+            <tr><td>Душа Дробац</td><td>Дорис Гајић</td><td>Дарија Миловановић</td></tr>
+            <tr><td>Владко Јовановић</td><td>Виктор Гајић</td><td>Никола Јанковић</td></tr>
+            <tr><td>Лара Амелио</td><td>Емилија Вербеселт Чурчић</td><td>Марина Јанковић</td></tr>
+            <tr><td>Нефели Миленковић</td><td>Саша Радуловић</td><td>Невена Ћулум</td></tr>
+            <tr><td>Даријан Јовић</td><td>Миа Менон Срећковић</td><td>Вук Ћулум</td></tr>
+            <tr><td>Константин Јовић</td><td>Виктор Лукетић</td><td>Лазар Воркапић</td></tr>
+            <tr><td>Ива Богданович</td><td>Виктор Богићевић Дејвис</td><td>Тиса Сикурела</td></tr>
+            <tr><td>Виктор Петровић</td><td>Максим Богићевић Дејвис</td><td>Тара Мировић</td></tr>
+            <tr><td>Андреа Петровић</td><td></td><td></td></tr>
+            <tr><td>Данило Орбовић</td><td></td><td></td></tr>
+            <tr><td>Андрија Орбовић</td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- shortcode section end -->
+  <!-- footer section start -->
+  <div class="footer_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-lg-4">
+          <h1 class="adderss_text">Адреса</h1>
+          <div class="map_icon"><img src="images/map-icon.png"><span class="paddlin_left_0">Avenue Orban 54, 1150 WSP</span></div>
+          <div class="map_icon_1"><img src="images/call-icon.png"><span
+              class="paddlin_left_0">...</span></div>
+          <div class="map_icon"><img src="images/mail-icon.png"><span class="paddlin_left_0">srpskadopunskabrisel@gmail.com</span>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <h1 class="adderss_text">Радно време</h1>
+          <div class="hiphop_text_1">Прва група:<span style="text-align: right; float: right;"> 08:45 - 11:15</span></div>
+          <div class="hiphop_text_1">Друга група: <span style="text-align: right; float: right;"> 11:30 - 14:00</span></div>
+          <div class="hiphop_text_1">Трећа група: <span style="text-align: right; float: right;"> 14:15 - 16:45</span></div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <h1 class="adderss_text">Други линкови:</h1>
+          <div class="social_icon">
+            <ul>
+              <li><a style="color: white;" href="https://www.facebook.com/p/Dopunska-%C5%A1kola-na-srpskom-jeziku-Brisel-100086015750474"><img src="images/fb-icon.png"> Фејсбук страница</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer section end -->
+  <!-- copyright section start -->
+  <div class="copyright_section">
+    <div class="container">
+      <p class="copyright_text">2026 All Rights Reserved.</p>
+    </div>
+  </div>
+  <!-- copyright section end -->
+  <!-- Javascript files-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.0.0.min.js"></script>
+  <script src="js/plugin.js"></script>
+  <!-- sidebar -->
+  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="js/custom.js"></script>
+  <!-- javascript -->
+  <script src="js/owl.carousel.js"></script>
+  <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+</body>
+
+</html>
