@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Игра вешала · Српска школа „Иво Андрић“ Брисел</title>
+  <meta name="description" content="Заиграјте игру вешала и откријте дуге српске речи. Вежбајте ћирилицу, учите нове појмове и забавите се.">
+  <link rel="canonical" href="https://srpskaskolabrisel.be/igra_vesala.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Српска школа „Иво Андрић“ Брисел">
+  <meta property="og:title" content="Игра вешала">
+  <meta property="og:description" content="Откриј дугу српску реч, слово по слово!">
+  <meta property="og:url" content="https://srpskaskolabrisel.be/igra_vesala.html">
+  <meta property="og:image" content="https://srpskaskolabrisel.be/images/logo.webp">
+  <meta property="og:locale" content="sr_RS">
+  <meta name="theme-color" content="#104cac">
+  <link rel="icon" href="images/logo.webp" type="image/webp">
+  <link rel="apple-touch-icon" href="images/logo.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&display=swap">
+  <link rel="stylesheet" href="css/site.css">
+  <script>document.documentElement.className += " js";</script>
+  <script src="js/hangman.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Пређи на садржај</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <img class="brand__mark" src="images/logo.webp" width="87" height="91" alt="Грб школе, отворена књига са пламеном у ловоровом венцу">
+        <span class="brand__text"><span class="brand__name">Иво Андрић</span><span class="brand__sub">Српска школа · Брисел</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bars"><span></span></span><span>Мени</span>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="Главна навигација">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">ПОЧЕТНА</a></li>
+          <li><a class="nav__link" href="o_skoli.html">О ШКОЛИ</a></li>
+          <li><a class="nav__link" href="o_ivi.html">О ИВИ АНДРИЋУ</a></li>
+          <li><a class="nav__link" href="novosti_i_desavanja.html">НОВОСТИ И ДЕШАВАЊА</a></li>
+          <li><a class="nav__link" href="knjige_i_zadaci.html">КЊИГЕ И ЗАДАЦИ</a></li>
+          <li><a class="nav__link" href="kontakt.html">КОНТАКТ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <ul class="breadcrumb"><li><a href="index.html">Почетна</a></li><li>Игра вешала</li></ul>
+        <p class="eyebrow">Играјмо се речима</p>
+        <h1>Погоди српску реч!</h1>
+        <p class="lead">Откриј дуге речи слово по слово. Изабери слово на табли или га откуцај на ћириличној тастатури — имаш 8 покушаја!</p>
+      </div>
+    </section>
+
+    <section class="section hangman-section">
+      <div class="container">
+        <div class="hangman-game" id="hangman-game">
+          <div class="hangman-game__top">
+            <div class="hangman-game__intro">
+              <span class="hangman-game__badge"><span aria-hidden="true">✦</span> Српска ћирилица</span>
+              <h2>Игра вешала</h2>
+              <p>Пажљиво бирај слова и освајај нове речи!</p>
+            </div>
+            <div class="hangman-score" aria-label="Резултат">
+              <span class="hangman-score__label">Погођене речи</span>
+              <strong id="hangman-score">0</strong>
+            </div>
+          </div>
+
+          <div class="hangman-game__board">
+            <div class="hangman-drawing" aria-hidden="true">
+              <svg viewBox="0 0 220 230" role="img">
+                <path class="hangman-drawing__base" d="M24 210h172M55 210V22h92v25M55 55h44" />
+                <circle class="hangman-part" data-part="1" cx="99" cy="72" r="18" />
+                <path class="hangman-part" data-part="2" d="M99 90v54" />
+                <path class="hangman-part" data-part="3" d="m99 105-27 25" />
+                <path class="hangman-part" data-part="4" d="m99 105 27 25" />
+                <path class="hangman-part" data-part="5" d="m99 144-24 36" />
+                <path class="hangman-part" data-part="6" d="m99 144 24 36" />
+                <path class="hangman-part hangman-part--extra" data-part="7" d="M92 68h1m13 0h1m-10 10q3 3 6 0" />
+                <path class="hangman-part hangman-part--extra" data-part="8" d="M94 61q5-4 10 0" />
+              </svg>
+              <span class="hangman-drawing__caption" id="hangman-attempts">Преостало покушаја: 8</span>
+            </div>
+
+            <div class="hangman-play">
+              <div class="hangman-hint">
+                <span class="hangman-hint__icon" aria-hidden="true">💡</span>
+                <p><strong>Помоћ:</strong> <span id="hangman-hint">Учитава се нова реч…</span></p>
+              </div>
+              <div class="hangman-word" id="hangman-word" aria-label="Скривена реч"></div>
+              <p class="hangman-message" id="hangman-message" role="status" aria-live="polite">Изабери прво слово!</p>
+              <div class="hangman-keyboard" id="hangman-keyboard" aria-label="Табла са ћириличним словима"></div>
+              <div class="hangman-actions">
+                <button class="btn btn--primary" id="hangman-new-game" type="button">Нова реч <span aria-hidden="true">↻</span></button>
+                <button class="btn btn--ghost" id="hangman-reveal" type="button">Откриј реч</button>
+              </div>
+            </div>
+          </div>
+          <p class="hangman-note"><span aria-hidden="true">🎓</span> Свака реч долази са кратком помоћи — научи нешто ново док се играш.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <h2>Адреса и контакт</h2>
+          <ul class="footer-list">
+            <li><span>GC Kontakt, Avenue Orban 54<br>1150 Woluwe-Saint-Pierre, Брисел</span></li>
+            <li><span><a href="mailto:srpskadopunskabrisel@gmail.com">srpskadopunskabrisel@gmail.com</a></span></li>
+            <li><span>Настава сваке суботе</span></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Радно време</h2>
+          <ul class="footer-hours">
+            <li><span>1. група</span><time datetime="08:45">08:45 – 11:15</time></li>
+            <li><span>2. група</span><time datetime="11:30">11:30 – 14:00</time></li>
+            <li><span>3. група</span><time datetime="14:15">14:15 – 16:45</time></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Корисне странице</h2>
+          <ul class="footer-links">
+            <li><a href="knjige_i_zadaci.html">Књиге и задаци</a></li>
+            <li><a href="igra_vesala.html" aria-current="page">Игра вешала</a></li>
+            <li><a href="kontakt.html">Како до нас</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© 2026 Допунска школа на српском језику „Иво Андрић“, Брисел</p>
+        <p>Школа Министарства просвете Републике Србије</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/site.js" defer></script>
+</body>
+</html>
