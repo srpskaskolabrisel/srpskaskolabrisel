@@ -1117,6 +1117,82 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .breadcrumb a { color: var(--ink-3); text-decoration: none; }
 .breadcrumb a:hover { color: var(--blue-700); }
 
+/* invitation + portrait video (home) ------------------------------------- */
+.invite {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: var(--sp-6);
+  align-items: center;
+}
+.invite__text > * + * { margin-top: var(--sp-3); }
+.invite__welcome {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--accent-600);
+}
+.verse {
+  list-style: none;
+  margin: var(--sp-4) 0 0;
+  padding: var(--sp-4);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--gold-600);
+  border-radius: var(--r);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  font-style: italic;
+  color: var(--ink);
+}
+.verse li {
+  position: relative;
+  margin: 0;
+  padding: 0.35rem 0 0.35rem 1.6rem;
+}
+.verse li::before {
+  content: "";
+  position: absolute;
+  left: 0.2rem;
+  top: 0.95em;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--accent-500);
+}
+.verse li:nth-child(even)::before { background: var(--blue-600); }
+.invite__cta {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--blue-700);
+}
+.video-frame {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 380px;
+}
+.video-frame video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  background: var(--blue-900);
+  border: 6px solid var(--surface);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-lg);
+}
+.video-frame figcaption {
+  margin-top: var(--sp-2);
+  text-align: center;
+  font-size: var(--fs-sm);
+  color: var(--ink-3);
+}
+@media (max-width: 860px) {
+  .invite { grid-template-columns: minmax(0, 1fr); gap: var(--sp-5); }
+  .video-frame { max-width: 340px; }
+}
+
 /* --------------------------------------------------------------- 9. footer */
 .site-footer {
   background: var(--blue-900);
